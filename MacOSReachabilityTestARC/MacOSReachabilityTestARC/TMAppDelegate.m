@@ -41,7 +41,7 @@
                                                object:nil];
 
     
-    ReachabilityObjc * reach = [ReachabilityObjc reachabilityWithHostname:@"www.google.com"];
+    ReachabilityObjc * reach = [ReachabilityObjc reachabilityObjcWithHostname:@"www.google.com"];
     
     reach.reachableBlock = ^(ReachabilityObjc * reachability)
     {

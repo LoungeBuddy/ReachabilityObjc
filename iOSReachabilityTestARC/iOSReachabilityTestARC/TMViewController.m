@@ -59,7 +59,7 @@
     //
     // create a Reachability object for www.google.com
 
-    self.googleReach = [ReachabilityObjc reachabilityWithHostname:@"www.google.com"];
+    self.googleReach = [ReachabilityObjc reachabilityObjcWithHostname:@"www.google.com"];
     
     self.googleReach.reachableBlock = ^(ReachabilityObjc * reachability)
     {

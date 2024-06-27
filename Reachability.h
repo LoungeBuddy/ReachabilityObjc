@@ -68,14 +68,14 @@ typedef void (^NetworkReachability)(ReachabilityObjc * reachability, SCNetworkCo
 @property (nonatomic, assign) BOOL reachableOnWWAN;
 
 
-+(instancetype)reachabilityWithHostname:(NSString*)hostname;
++(instancetype)reachabilityObjcWithHostname:(NSString*)hostname;
 // This is identical to the function above, but is here to maintain
 //compatibility with Apples original code. (see .m)
-+(instancetype)reachabilityWithHostName:(NSString*)hostname;
-+(instancetype)reachabilityForInternetConnection;
-+(instancetype)reachabilityWithAddress:(void *)hostAddress;
-+(instancetype)reachabilityForLocalWiFi;
-+(instancetype)reachabilityWithURL:(NSURL*)url;
++(instancetype)reachabilityObjcWithHostName:(NSString*)hostname;
++(instancetype)reachabilityObjcForInternetConnection;
++(instancetype)reachabilityObjcWithAddress:(void *)hostAddress;
++(instancetype)reachabilityObjcForLocalWiFi;
++(instancetype)reachabilityObjcWithURL:(NSURL*)url;
 
 -(instancetype)initWithReachabilityRef:(SCNetworkReachabilityRef)ref;
 
