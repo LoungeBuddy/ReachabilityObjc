@@ -18,7 +18,7 @@
 
 -(void)reachabilityChanged:(NSNotification*)note
 {
-    Reachability * reach = [note object];
+    ReachabilityObjc * reach = [note object];
     
     if([reach isReachable])
     {
@@ -41,16 +41,16 @@
                                                object:nil];
 
     
-    Reachability * reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    ReachabilityObjc * reach = [ReachabilityObjc reachabilityWithHostname:@"www.google.com"];
     
-    reach.reachableBlock = ^(Reachability * reachability)
+    reach.reachableBlock = ^(ReachabilityObjc * reachability)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             _blockLabel.stringValue = @"Block Says Reachable";
         });
     };
     
-    reach.unreachableBlock = ^(Reachability * reachability)
+    reach.unreachableBlock = ^(ReachabilityObjc * reachability)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             _blockLabel.stringValue = @"Block Says Unreachable";
